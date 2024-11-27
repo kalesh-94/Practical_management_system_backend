@@ -9,6 +9,13 @@ const PORT =5000
 dotenv.config();
 
 dbConnect();
+
+app.get("",(req,res)=>{
+    res.json({
+      success:"true",
+      message:"succesful"
+    })
+  })
 //mounting api routes
 app.use("/api/v1",router)
 
